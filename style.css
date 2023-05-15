@@ -9,6 +9,7 @@ h1 {
 .box-container {
     display: flex;
     justify-content: center;
+    border: 5px;
 }
 
 .box {
@@ -22,24 +23,25 @@ h1 {
     border-color: black;
 }
 
-.input {
-    display: flexbox;
-    padding: 5px;
-    border-radius: 5px;
-    
-}
-
 .input-box-container {
     background-color: rgb(48, 47, 47);
     border-radius: 5px;
     padding: 5px;
-    margin-bottom: 6px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
+
+.input {
+    display: flexbox;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 
 #number_input {
     margin: 5px;
     width: 10%;
-    
+    ;
 }
 
 button {
@@ -50,6 +52,6 @@ button {
     display: flex;
     background-color: white;
     color: black;
-    margin-top: 20px;
     padding: 1%;
+    margin-top: 10px;
 }
