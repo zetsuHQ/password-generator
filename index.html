@@ -10,14 +10,29 @@
 
 <body style="background-color: #0d1117;">
     <h1 style="color: white;">Password generator</h1>
-    <div id="box-container" class="box-container" style="color: white">
+    <div class="box-container" style="color: white">
         <div class="box">
-            Aqui vai ser os bagulho
-            <div class="box-input">
-                teste
+            <div class="input-box-container">
+                Amount of characters <br/>
+                <label class="input">
+                    <input id="number_input" type="number" min="4" max="50">
+                </label>
             </div>
-        </div>
+            <div class="input-box-container">
+                Character types <br/>
+                <label class="input">
+                    <input type="checkbox">
+                    Letters
+                    <input type="checkbox">
+                    Numbers
+                    <input type="checkbox">
+                    Special characters
+                </label>
+            </div>
+            <button>Generate
 
+            </button>
+        </div>
     </div>
     <script src="password_generator.js"></script>
 </body>
