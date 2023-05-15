@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Password generator</title>
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="password_generator.js"></script>
 </head>
 
 <body style="background-color: #0d1117;">
@@ -13,13 +15,15 @@
     <div class="box-container" style="color: white">
         <div class="box">
             <div class="input-box-container">
-                Amount of characters <br/>
-                <label class="input">
-                    <input id="number_input" type="number" min="4" max="50">
-                </label>
+                <div class="input-box">
+                    Amount of characters <br />
+                    <label class="input">
+                        <input id="number_input" type="number" min="4" max="50">
+                    </label>
+                </div>
             </div>
             <div class="input-box-container">
-                Character types <br/>
+                Character types <br>
                 <label class="input">
                     <input type="checkbox">
                     Letters
@@ -29,12 +33,13 @@
                     Special characters
                 </label>
             </div>
-            <button>Generate</button>
+            <button id="generate">Generate</button>
             <div id="output-box">
                 kjabgkjsnnjdafsb
             </div>
         </div>
     </div>
-    <script src="password_generator.js"></script>
+    
 </body>
 </html>
+
