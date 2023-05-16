@@ -49,7 +49,7 @@ button {
 }
 
 #output-box {
-    display: flex;
+    display: none;
     background-color: white;
     color: black;
     padding: 1%;
