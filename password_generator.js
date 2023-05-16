@@ -16,9 +16,10 @@ const generates_random_num = (range) => {
     return Math.floor(Math.random() * range + 1)
 }
 
+document.querySelector('input')
+
 function exec() {
     console.log("funcionou")
 }
 
-const generate = document.getElementById('generate')
 
