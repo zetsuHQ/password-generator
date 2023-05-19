@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="password_generator.js"></script>
 </head>
-
 <body style="background-color: #0d1117;">
     <h1 style="color: white;">Password generator</h1>
     <div class="box-container" style="color: white">
@@ -18,28 +16,24 @@
                 <div class="input-box">
                     Amount of characters <br />
                     <label class="input">
-                        <input id="number_input" type="number" min="4" max="50">
+                        <input id="char_amount" type="number" min="4" max="50">
                     </label>
                 </div>
             </div>
             <div class="input-box-container">
                 Character types <br>
-                <label class="input">
-                    <input type="checkbox">
-                    Letters
-                    <input type="checkbox">
-                    Numbers
-                    <input type="checkbox">
-                    Special characters
-                </label>
+                <input id="contains-letters" type="checkbox">
+                Letters
+                <input id="contains-numbers" type="checkbox">
+                Numbers
+                <input id="contains-specials" type="checkbox">
+                Special characters
             </div>
-            <button id="generate" onclick="exec()">Generate</button>
+            <button id="generate">Generate</button>
             <div id="output-box">
-                kjabgkjsnnjdafsb
             </div>
         </div>
     </div>
-    
+    <script src="password_generator.js"></script>
 </body>
 </html>
-
