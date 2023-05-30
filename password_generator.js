@@ -21,6 +21,7 @@ const generates_random_num = (range) => {
 }
 
 function exec() {
+    console.log("oi")
 }
 
 function get_parameters() {

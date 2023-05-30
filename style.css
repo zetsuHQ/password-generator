@@ -55,3 +55,7 @@ button {
     padding: 1%;
     margin-top: 10px;
 }
+
+#char_amount {
+    width: 35px;
+}
