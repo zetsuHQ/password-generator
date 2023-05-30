@@ -1,0 +1,1 @@
+I decided to develop this when wondering how firefox generated it's "secure passwords".
