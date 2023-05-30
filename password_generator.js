@@ -5,30 +5,7 @@ const chars = {
 }
 
 const is_checked = (input) => {
-    if (input === "on") {
-        return true
-    } else {
-        return false
+    if (input.value === "on") {
+        
     }
 }
-
-
-const generate = document.getElementById("generate")
-generate.addEventListener('click', exec)
-
-const generates_random_num = (range) => {
-    return Math.floor(Math.random() * range + 1)
-}
-
-function exec() {
-    console.log("oi")
-}
-
-function get_parameters() {
-    const char_amount = document.getElementById("char-amount")
-    const contains_letters = document.getElementById("contains-letters")
-    const contains_numbers = document.getElementById("contains-numbers")
-    const contains_specials = document.getElementById("contains-specials")
-}
-
-let a = 1
