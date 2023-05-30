@@ -30,3 +30,5 @@ function get_parameters() {
     const contains_numbers = document.getElementById("contains-numbers")
     const contains_specials = document.getElementById("contains-specials")
 }
+
+let a = 0
