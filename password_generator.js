@@ -31,4 +31,4 @@ function get_parameters() {
     const contains_specials = document.getElementById("contains-specials")
 }
 
-let a = 0
+let a = 1
