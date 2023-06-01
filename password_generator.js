@@ -4,8 +4,29 @@ const chars = {
     specials: ['!', '@', '#', '$', '%', '&']
 }
 
-const is_checked = (input) => {
-    if (input.value === "on") {
-        
+function generates_rand(min = 0, max) {
+    return Math.floor(Math.random() * max + min)
+}
+
+let current_parameters = {}
+
+function get_parameters() {
+    if (document.getElementById("contains-letters").checked) {
+        current_parameters = chars.letters
+    }
+    if (document.getElementById("contains-numbers").checked) {
+        current_parameters = chars.numbers
+    }
+    if (document.getElementById("contains-specials").checked) {
+        current_parameters = chars.specials
     }
 }
+
+function exec() {
+    const output = document.getElementById("output-box")
+    output.innerHTML = generates_rand(1, 5)
+}
+
+const generate = document.getElementById("generate")
+generate.addEventListener('click', exec)
+
