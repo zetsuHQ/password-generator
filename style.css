@@ -49,11 +49,12 @@ button {
 }
 
 #output-box {
-    display: none;
+    display: flex;
     background-color: white;
     color: black;
     padding: 1%;
     margin-top: 10px;
+    height: 15px;
 }
 
 #char_amount {
