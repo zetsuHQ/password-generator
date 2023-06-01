@@ -22,9 +22,18 @@ function get_parameters() {
     }
 }
 
+let char_amount = document.getElementById("char-amount").value
+
+function password_generator(){
+    for (let i = 0; i < char_amount; i++) {
+        let new_char_type = current_parameters[generates_rand(Object.keys(current_parameters).length)]
+        let new_char = new_char_type[generates_rand(new_char_type.length)]
+    }
+}
+
 function exec() {
     const output = document.getElementById("output-box")
-    output.innerHTML = generates_rand(1, 5)
+    output.innerHTML = char_amount
 }
 
 const generate = document.getElementById("generate")
