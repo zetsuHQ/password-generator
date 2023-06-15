@@ -1,62 +1,58 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 { 
-    text-align: center;
-}
-
-.box-container {
+h1 {
     display: flex;
     justify-content: center;
-    border: 5px;
 }
 
-.box {
-    display: flexbox;
-    background-color: rgb(59, 59, 59);
-    padding: 5px;
-    width: 350px;
-    text-align: center;
-    border-radius: 5px;
-    border-style: ridge;
-    border-color: black;
-}
-
-.input-box-container {
-    background-color: rgb(48, 47, 47);
-    border-radius: 5px;
-    padding: 5px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-.input {
-    display: flexbox;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-
-#number_input {
-    margin: 5px;
-    width: 10%;
-    ;
-}
-
-button {
-    font-size: large;
-}
-
-#output-box {
+#box-container {
     display: flex;
-    background-color: white;
-    color: black;
-    padding: 1%;
-    margin-top: 10px;
-    height: 15px;
+    justify-content: center;
 }
 
-#char_amount {
+.mother-box {
+    display: flexbox;
+    background-color: rgb(46, 45, 45);
+    width: 300px;
+    border: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.parameter-box-container {
+    display: flex;
+    justify-content: center;
+}
+
+.parameter-box {
+    display: flexbox;
+    width: 99%;
+    background-color: rgb(37, 35, 35);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+ol {
+    padding-left: 1%;
+}
+
+.input-header {
+    text-align: center;
+}
+
+#length-container {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+
+}
+
+#length {
     width: 30px;
+}
+
+#generate-container {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
 }
