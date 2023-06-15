@@ -8,32 +8,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body style="background-color: #0d1117;">
     <h1 style="color: white;">Password generator</h1>
-    <div class="box-container" style="color: white">
-        <div class="box">
-            <div class="input-box-container">
-                <div class="input-box">
-                    Amount of characters <br />
-                    <label class="input">
-                        <input id="char-amount" type="number" min="4" max="50">
-                    </label>
+    <div id="box-container" style="color: white">
+        <div class="mother-box">
+            <div class="parameter-box-container">
+                <div class="parameter-box">
+                    <p class="input-header">Password length</p>
+                    <div id="length-container">
+                        <input id="length" type="number" min="4" max="50">
+                    </div>
                 </div>
             </div>
-            <div class="input-box-container">
-                Character types <br>
-                <input id="contains-letters" type="checkbox" class="checkbox">
-                Letters
-                <input id="contains-numbers" type="checkbox" class="checkbox">
-                Numbers
-                <input id="contains-specials" type="checkbox" class="checkbox">
-                Special characters
+            <div class="parameter-box-container">
+                <div class="parameter-box">
+                    <div class="input-header-container">
+                        <p class="input-header">Character types</p>
+                    </div>
+                    <ol id="checkboxes">
+                        <input id="contains-letters" type="checkbox" class="checkbox">
+                        <label for="contains-letters">a-z</label><br>
+                        <input id="contains-numbers" type="checkbox" class="checkbox">
+                        1-9 <br>
+                        <input id="contains-specials" type="checkbox" class="checkbox">
+                        Specials (!@#$%&) <br>
+                    </ol>
+                </div>
             </div>
-            <button id="generate">Generate</button>
+            <div id="generate-container">
+                <button id="generate">Generate</button>
+            </div>
             <div id="output-box">
+                <output>
+                    
+                </output>
             </div>
         </div>
     </div>
     <script src="password_generator.js"></script>
 </body>
+
 </html>
