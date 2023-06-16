@@ -35,11 +35,14 @@ function password_generator(){
     return new_password
 }
 
+let generate = document.getElementById("generate")
+
 function exec() {
-    const output = document.getElementById("output-box")
-    get_parameters()
-    output.innerHTML = current_parameters
+    const output = document.getElementById("output")
+    if (output.style.display === "none") {
+        output.style.display = "block"
+    } else {
+        output.style.display = "none"
+    }
 }
 
-const generate = document.getElementById("generate")
-generate.addEventListener('click', exec)
