@@ -19,16 +19,16 @@ function validate(parameters) {
     if (length === "") {
         window.alert("Please select your password's length.")
         return false
-    } else if (parameters.length < 2) {
+    } else if (parameters.length < 2) { // Because the first parameter will always fill the index "1", since "0" is mandatory. 
         window.alert("Please select at least one character type.")
         return false
     } else return true
 }
 
-// Gets the value of each input, being
+// Gets the value of each input.
 function parser(parameters) {
-    const length = document.getElementById("length").value
-    parameters.push(document.getElementById("length").value)
+    const length = parseInt(document.getElementById("length").value)
+    parameters.push(length)
     if (document.getElementById("contains-letters").checked) {
         parameters.push(chars[0])
     }
@@ -44,13 +44,15 @@ function parser(parameters) {
 
 }
 
-function password_generator(parameters) {
+function password_generator(parameters) { // Tem algo errado aqui
     let new_password = ""
-    let new_char_type
-    let new_char = ""
-    for (i = 0; i < parameters[0]; i++) {
-        new_char_type = chars[generates_rand]
+    for (let i = 0; i < parameters[0]; i++) {
+        const new_char_type = chars[generates_rand(parameters.length - 1)]
+        const new_char = new_char_type[generates_rand(new_char_type.length)]
+        new_password += new_char
     }
+
+    return new_password
 }
 
 let generate = document.getElementById("generate")
@@ -59,13 +61,13 @@ let output = document.getElementById("actual-output")
 
 function exec() {
     exec: {
-        const parameters = []
+        let parameters = []
         parser(parameters)
         const are_valid = validate(parameters)
         if (!are_valid) {
             break exec
         }
-        console.log(parameters)
+        output.innerHTML = password_generator(parameters)
     }
 }
 
