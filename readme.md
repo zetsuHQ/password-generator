@@ -4,4 +4,4 @@ This project has taught me a lot, including the very basic of front-end, which I
 
 I'm willing to keep adding new stuff to this repository as long as my knowledge in web development keeps expanding.
 
-Shoutout to Boitatech <3
+Shoutout to Boitatech
