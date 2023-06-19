@@ -15,20 +15,26 @@ function random_index(array) {
 }
 
 function validate(parameters) {
-    const length = parameters[0]
-    if (length === "") {
+    const password_length = parameters[0]
+    console.log(typeof password_length)
+
+    if (isNaN(password_length)) {
         window.alert("Please select your password's length.")
         return false
-    } else if (parameters.length < 2) { // Because the first parameter will always fill the index "1", since "0" is mandatory. 
+    }
+    if (parameters.length < 2) { // Because the first parameter will always fill the index "1", since "0" is mandatory. 
         window.alert("Please select at least one character type.")
         return false
     } else return true
 }
 
 // Gets the value of each input.
-function parser(parameters) {
+
+function parser() {
     const length = parseInt(document.getElementById("length").value)
+    let parameters = []
     parameters.push(length)
+
     if (document.getElementById("contains-letters").checked) {
         parameters.push(chars[0])
     }
@@ -41,13 +47,13 @@ function parser(parameters) {
     if (document.getElementById("contains-specials").checked) {
         parameters.push(chars[3])
     }
-
+    return parameters
 }
 
 function password_generator(parameters) { // Tem algo errado aqui
     let new_password = ""
     for (let i = 0; i < parameters[0]; i++) {
-        const new_char_type = chars[generates_rand(parameters.length - 1)]
+        const new_char_type = parameters[generates_rand(parameters.length - 1) + 1]
         const new_char = new_char_type[generates_rand(new_char_type.length)]
         new_password += new_char
     }
@@ -61,13 +67,12 @@ let output = document.getElementById("actual-output")
 
 function exec() {
     exec: {
-        let parameters = []
-        parser(parameters)
-        const are_valid = validate(parameters)
+        let current_parameters = parser()
+        const are_valid = validate(current_parameters)
         if (!are_valid) {
             break exec
         }
-        output.innerHTML = password_generator(parameters)
+        output.innerHTML = password_generator(current_parameters)
     }
 }
 
