@@ -35,18 +35,25 @@ function parser() {
     let parameters = []
     parameters.push(length)
 
-    if (document.getElementById("contains-letters").checked) {
-        parameters.push(chars[0])
+    const checkboxes = document.querySelectorAll('input.checkbox')
+    for (let i = 0; i <= 3; i++) {
+        if (checkboxes[i].checked){
+            parameters.push(chars[i])
+        }
     }
-    if (document.getElementById("contains-caps").checked) {
-        parameters.push(chars[1])
-    }
-    if (document.getElementById("contains-numbers").checked) {
-        parameters.push(chars[2])
-    }
-    if (document.getElementById("contains-specials").checked) {
-        parameters.push(chars[3])
-    }
+
+    // if (document.getElementById("contains-letters").checked) {
+    //     parameters.push(chars[0])
+    // }
+    // if (document.getElementById("contains-caps").checked) {
+    //     parameters.push(chars[1])
+    // }
+    // if (document.getElementById("contains-numbers").checked) {
+    //     parameters.push(chars[2])
+    // }
+    // if (document.getElementById("contains-specials").checked) {
+    //     parameters.push(chars[3])
+    // }
     return parameters
 }
 
