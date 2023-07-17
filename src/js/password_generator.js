@@ -66,9 +66,10 @@ function password_generator(parameters) {
     return new_password;
 }
 
-let generate = document.getElementById("generate");
+let generate = document.getElementById("generate")
 
 let output = document.getElementById("actual-output");
+let output_box = document.getElementById("output-box")
 
 function exec() {
     exec: {

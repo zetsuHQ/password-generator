@@ -65,7 +65,7 @@ ol {
     margin: 2%;
 }
 
-#output {
+#output-box {
     display: block;
 }
 
@@ -84,4 +84,5 @@ ol {
     border-radius: 5px;
     border-color: grey;
     padding: 5px;
+    min-height: 20px;
 }
