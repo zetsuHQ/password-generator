@@ -47,7 +47,12 @@ ol {
     display: flex;
     justify-content: center;
     margin: 5%;
+}
 
+#warning {
+    text-align: center;
+    font-size: small;
+    color: rgb(119, 119, 119);
 }
 
 #length {

@@ -10,24 +10,26 @@ function generates_rand(max, min = 0) {
     return Math.floor(Math.random() * max + min);
 }
 
-let length = document.getElementById("length");
+let length_element = document.getElementById("length");
 
-length.addEventListener('input', (event) => {
-    const value = parseInt(event.target.value);
-    const min = parseInt(event.target.min)
-    const max = parseInt(event.target.max)
-
-    if (value < min) {
-        event.target.value = min;
-    } else if (value > max) {
-        event.target.value = max;
+// Blocks non-numeric characters on length input.
+length_element.addEventListener('input', (event) => {
+    const test = parseInt(event.target.value) + 0;
+    if (isNaN(test)) {
+        event.target.value = "";
     }
 });
 
 // Gets the value of each input.
 function parser() {
-    let parameters = []
-    parameters.push(parseInt(length.value)); // Pushes the "length" parameter.
+    let parameters = [];
+    let length = parseInt(length_element.value);
+    if (length < length_element.min) {
+        length = length_element.min;
+    } else if (length > length_element.max) {
+        length = length_element.max;
+    }
+    parameters.push(length);
 
     const checkboxes = document.querySelectorAll('input.checkbox');
     for (let i = 0; i <= 3; i++) {
@@ -39,9 +41,8 @@ function parser() {
     return parameters;
 }
 
-function validate(parameters) {
+function check_empty(parameters) {
     const password_length = parameters[0];
-    console.log(typeof password_length);
     
     if (isNaN(password_length)) {
         window.alert("Please select your password's length.");
@@ -72,7 +73,7 @@ let output = document.getElementById("actual-output");
 function exec() {
     exec: {
         const current_parameters = parser();
-        const are_valid = validate(current_parameters);
+        const are_valid = check_empty(current_parameters);
         if (!are_valid) {
             break exec;
         }
