@@ -1,5 +1,3 @@
-I decided to develop this when wondering how firefox generated it's "secure passwords".
+A simple password generator written in Javascript.
 
-This project has taught me a lot, including the very basic of front-end, which I don't think will be useless knowledge at all.
-
-I'm willing to keep adding new stuff to this repository as long as my knowledge in web development keeps expanding.
+Project designed with the objective of applying in practice basic concepts of programming and a little bit of HTML and CSS.
